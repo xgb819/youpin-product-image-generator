@@ -1,78 +1,85 @@
-# 小米有品产品站设计规范 Skill
+# 有品产品图生成
 
-根据 47 张原始规范图片整理的 Codex skill，用于制作、还原与校对 **1080px 宽**的商品产品站长页。包含详细版式数值、正确模板、错误示范及修正方式，每条模块规范均可追溯原图。
-
-> **备注：本 skill 只包含产品站长图规范，部分内容有所删减，不包含主图、轮播图等设计规范。**
-
-技能入口：[SKILL.md](SKILL.md)。
-
-## 规范预览
-
-以下为来源规范板，包含尺寸标注与正确参考图。点击图片查看原图。
-
-**头图规范**：产品名称、slogan、logo 的字体层级、间距和安全区。
-
-[![头图规范：字体、间距、安全区与成品对照](references/source-images/S22.jpg)](references/source-images/S22.jpg)
-
-**图形 ICON 规范**：圆框尺寸、线宽、图形安全区、文案对齐和正文组合版式，附成品参考。
-
-[![图形 ICON 规范：尺寸、线宽、文案对齐与正文版式](references/source-images/S12.jpg)](references/source-images/S12.jpg)
-
-## 安装
-
-在 Codex 中发送：
+也支持独立生成上架七字段纯文字：名称30字、简称8字、描述30字、简述13字、三条核心卖点各24字。复用已有商品事实，尽量接近上限，不凑字添加功能，不需要生图、字体、PS或Sharp。见 [listing-copy.md](references/listing-copy.md)。
 
 ```text
-安装这个 skill：https://github.com/godm609-max/mi-product-site-spec
+$youpin-product-image-generator 用这款商品已确认资料生成上架七字段，按30/8/30/13/24/24/24字上限尽量写满，给出字数；只问真正缺失的事实，不生图。
 ```
 
-或将本仓库完整下载到 skills 目录，目录结构应为：
+AI撰写后可用纯文字辅助命令检查并落盘：
 
-```text
-~/.codex/skills/mi-product-site-spec/SKILL.md
-~/.codex/skills/mi-product-site-spec/references/
-~/.codex/skills/mi-product-site-spec/agents/
+```sh
+node scripts/export-listing-copy.mjs /path/to/listing.json --out /path/to/run
 ```
 
-安装时保留 `references/source-images/`，后续才能核查原始标注和正误对照。
+一次输出可复制TXT、字数表Markdown和依据报告JSON。程序负责约束与导出，不内置另一套LLM或固定商品卖点模板。仅此文字路径只需Node.js内置模块，完全不加载Sharp或字体。
 
-## 使用示例
+面向小米有品商品图片制作与校对的Skill。保留上游47张详情规范，补充透明主图、实景方/横图、轮播规范、官方PSD证据，以及商品事实核验、文案来源和按编号单图修改流程。
+
+AI读取规则，使用现有工具制作图像。本仓库附带Sharp辅助导出程序，不含生图服务、商品识别或自动发布。普通规范查询无需API key、Node或Photoshop。
+
+## 接入
+
+完整使用本仓库，保留规范原图与模板：
 
 ```text
-$mi-product-site-spec 为这个产品规划1080px产品站长页，给出模块、字号、间距和图片构图要求。
+安装这个 skill：https://github.com/xgb819/youpin-product-image-generator
+```
+
+手动接入时以 `youpin-product-image-generator` 作为技能文件夹。TRAE等使用各自项目技能入口，不假定根目录会自动加载。本Fork技能名由 `mi-product-site-spec` 改为 `youpin-product-image-generator`，原详情来源保留。
+
+```text
+$youpin-product-image-generator 根据这款商品的本款资料制作透明主图、轮播和实景图；核对SKU、配置与来源，未知功能不写进文案，文字用真实MiSans排版。
 ```
 
 ```text
-$mi-product-site-spec 校对这份设计稿，按模块指出当前值、规范值、修正方式和来源编号。
+$youpin-product-image-generator 只修改03号轮播标题，复用已确认事实，保留其他图片和旧版本，检查对应官方版式及导出结果。
 ```
 
-```text
-$mi-product-site-spec 检查头图中的版本标签、米家接入标识和主打卖点网格，辨别是否用了错误示范样式。
-```
+## 规则入口
 
-本技能提供规范知识与走查方式。需要生成商品摄影或场景图时，可结合用户已配置的图片生成工具；普通规范查询不需要 API key 或额外脚本。
-
-## 内容导航
-
-| 内容 | 文档 |
+| 图位/流程 | 规范 |
 |---|---|
-| 画布、MiSans 字阶、色值、安全区与取值原则 | [基础设计系统](references/foundations.md) |
-| 头图、版本标签、米家接入标识、主打卖点网格 | [头图与主打卖点](references/hero-and-selling-points.md) |
-| 图文结合/分开、图形 ICON、数字 ICON | [正文与图标](references/body-and-icons.md) |
-| 2/3/4/6 图排版、列宽及卡片文案 | [多图展示](references/multi-image.md) |
-| 细节宫格/横版、参数页、品牌介绍、获奖标识 | [细节与附属模块](references/details-parameters-brand.md) |
-| FAQ 独立字号、间距和安全区 | [常见问题](references/faq.md) |
-| 3 张错误示范板的具体问题与正确邻例 | [错误示范与修正](references/anti-patterns.md) |
-| 原图笔误、标注差异与解释依据 | [证据与差异处理](references/evidence-notes.md) |
-| 制作和走查时的逐项检查 | [校对清单](references/review-checklist.md) |
-| 全部 47 张来源图及文件校验信息 | [原图索引](references/source-index.md)、[sources.json](references/sources.json) |
+| 透明主图 | [catalog-images.md](references/catalog-images.md)，R01 |
+| 实景方图/横图 | [scene-images.md](references/scene-images.md)，R02/R03 |
+| 轮播首图、常规图文、活动、细节、多图、SKU | [carousel.md](references/carousel.md)，C01–C05 |
+| 详情基础字阶 | [foundations.md](references/foundations.md) |
+| 详情头图、卖点网格 | [hero-and-selling-points.md](references/hero-and-selling-points.md) |
+| 正文、图标、多图 | [body-and-icons.md](references/body-and-icons.md)、[multi-image.md](references/multi-image.md) |
+| 参数、细节、品牌、FAQ | [details-parameters-brand.md](references/details-parameters-brand.md)、[faq.md](references/faq.md) |
+| 正误对照与证据差异 | [anti-patterns.md](references/anti-patterns.md)、[evidence-notes.md](references/evidence-notes.md) |
+| 商品事实、文案依据 | [product-facts.md](references/product-facts.md) |
+| 上架七字段纯文字 | [listing-copy.md](references/listing-copy.md)、[listing-fields.json](references/listing-fields.json) |
+| 导出及单图重做 | [image-workflow.md](references/image-workflow.md)、[render-manifest.md](references/render-manifest.md) |
 
-## 规则怎么取值
+官方条文、PSD实测、几何推导和实施选择分别记录：轮播上方居中不套到详情头图；横图940×470不套方图640×640；详情两图480px不套轮播486/320px。不凭规范板编号认定所有商品固定7/8张轮播。
 
-具体模块的明确标注优先于通用字阶示例；文字色号优先于 JPEG 取色；几何推导值与源图硬值分开记录。错误示范板中也有正确邻例，按红框与说明判断具体元素，不能把整张图一概判错。
+原47张详情图见 [原索引](references/source-index.md)、[sources.json](references/sources.json)；新增8张见 [补充索引](references/resource-source-index.md)、[resource-sources.json](references/resource-sources.json)；3个官方PSD及文字层证据见 [carousel-template-evidence.json](references/carousel-template-evidence.json)。示例商品与参数、认证、奖项不作为新商品事实。
 
-本文档对应这批产品站规范。其他商城详情页、轮播图、PC 导航或响应式断点规则需要另行确认，不自动混用。MiSans 字体文件不随仓库提供，使用者按实际环境安装。
+## 辅助程序与验证
 
-## 来源
+Node.js≥22.13（满足所固定pnpm版本要求），使用项目声明的pnpm版本：
 
-规范文本依据所附 47 张原图提炼；原图整理于 2026-10-05。原文件名、尺寸、字节数、SHA-256、模块分类保存在 `references/sources.json`；原图副本用于核查规则和错误示范。示例商品、参数、认证、奖项和品牌内容需替换为实际产品资料。
+```sh
+pnpm install --frozen-lockfile
+pnpm validate
+pnpm test
+node scripts/render-image.mjs /path/to/image.json --out /path/to/run
+node scripts/verify-image.mjs /path/to/run/image-id.png --report /path/to/run/image-id.report.json
+```
+
+`validate`核对55张规范图、1份上架文案规范摘录的哈希、3个PSD实际文字层和文档链接；`test`包括图片和七字段文字的正常导出与拒绝错误用例。文字轮播需要 `--fonts /path/to/misans` 指向三种MiSans OTF，字体不随仓库分发；上架纯文字无需字体。
+
+测试字体相关用例时设置 `YOUPIN_FONT_DIR`，未提供时会明确skip，不能说字体测试已通过。受限Windows环境如系统临时目录缺少改名权限，可用 `YOUPIN_TEST_TMP` 指向可写且可改名的目录，例如 `.local/test-tmp`；不需要修改系统权限或关闭安全设置。
+
+渲染器实现透明主图、实景方/横图、轮播首图和单行标题+单行描述轮播。其他变体与详情仍由AI按规范制作，可使用PS或其他真实字体排版工具；不能宣称辅助脚本已经支持全部模板。
+
+默认preview；正式导出加 `--production`，要求资产哈希、主体框审核、文案确认和针对确切预览哈希的目检记录。脚本不代填审核确认。自动检查只证明可测的像素、字节和所提供边界，不能证明自然语言宣传、实物外观或认证。
+
+## 素材与版本
+
+真实商品资料、私有Logo、对话、审核记录和字体不提交公共规则仓库。使用外部工作目录或已忽略的 `runs/`、`.local/`。单图修改保留稳定ID、revision和旧版，事实变化时才追踪所有受影响图位。
+
+用户指定单图最高1680、六张轮播、品牌模块范围、同款SKU共轮廓、同母图衍生等，属于该商品项目要求，不冒写成官方通用规则。
+
+详情规范提炼来自上游 [mi-product-site-spec](https://github.com/Ricardo0426/mi-product-site-spec)。新增来源来自用户提供的官方规范包；Banner和闪屏未在本次扩展范围内。

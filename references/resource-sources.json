@@ -1,0 +1,115 @@
+{
+  "description": "新增资源位与轮播规范的补充索引；不替换现有S01-S47索引，不表示规则文档已接入。",
+  "entries": [
+    {
+      "id": "R01",
+      "path": "source-images/resource-slots/R01_主图规范.jpg",
+      "width": 2560,
+      "height": 2000,
+      "bytes": 1877609,
+      "sha256": "4ae993c3f742aedd72f79f241026188d49e6bf1ffd435c911420621f226bc647",
+      "note": "第1页嵌入JPEG直接提取，含正确与错误案例。",
+      "source_document": "产品站制作-线上规范链接+PDF版/周边图素规范/周边图素-资源位图素规范.pdf",
+      "source_sha256": "fe6cb13f2bc53c7477f7fbc498185a2f9086a215ee20f73727a8604a96e82afe",
+      "page": 1,
+      "derivative": false
+    },
+    {
+      "id": "R02",
+      "path": "source-images/resource-slots/R02_场景方图规范.jpg",
+      "width": 2560,
+      "height": 1620,
+      "bytes": 877688,
+      "sha256": "a9aa09dddd94ede3e707522142b0e3e6a41dff0675e724ca716c5bcb4495bb8e",
+      "note": "从第2页嵌入长图顶部裁出规范与通用说明，未包含后续全部分类案例。保留原尺寸，不重绘规范。",
+      "source_document": "产品站制作-线上规范链接+PDF版/周边图素规范/周边图素-资源位图素规范.pdf",
+      "source_sha256": "fe6cb13f2bc53c7477f7fbc498185a2f9086a215ee20f73727a8604a96e82afe",
+      "page": 2,
+      "source_image_dimensions": [
+        2560,
+        34030
+      ],
+      "source_image_sha256": "8b7bf3e519c0cd7b5659b66aa04fcb27208736cad394537f0577c0375ec0a8be",
+      "derivative": true,
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 2560,
+        "height": 1620
+      }
+    },
+    {
+      "id": "R03",
+      "path": "source-images/resource-slots/R03_场景横图规范.jpg",
+      "width": 2560,
+      "height": 3382,
+      "bytes": 4583874,
+      "sha256": "4496b7db191d2a47d7ac771d5a4b94c4b88415e9fe247eccc80ea46d1b6e6846",
+      "note": "第3页嵌入JPEG直接提取，含正确与错误案例。",
+      "source_document": "产品站制作-线上规范链接+PDF版/周边图素规范/周边图素-资源位图素规范.pdf",
+      "source_sha256": "fe6cb13f2bc53c7477f7fbc498185a2f9086a215ee20f73727a8604a96e82afe",
+      "page": 3,
+      "derivative": false
+    },
+    {
+      "id": "C01",
+      "path": "source-images/carousel/C01_轮播图规范说明.jpg",
+      "width": 3840,
+      "height": 2160,
+      "bytes": 1022999,
+      "sha256": "5bf7f6bd95e232c251ebe8a11589f29ad0615c68af03126bf9cfd8edbb648b90",
+      "note": "官方现成JPG，逐字节复制；图片编号是官方规范板编号，不代表所有产品必须固定相同张数。",
+      "source_document": "产品站制作-线上规范链接+PDF版/周边图素规范/轮播图规范+源文件/轮播图规范-PDF/轮播图-规范说明.jpg",
+      "source_sha256": "5bf7f6bd95e232c251ebe8a11589f29ad0615c68af03126bf9cfd8edbb648b90",
+      "derivative": false
+    },
+    {
+      "id": "C02",
+      "path": "source-images/carousel/C02_轮播图第1-2张规范.jpg",
+      "width": 3840,
+      "height": 2160,
+      "bytes": 2433590,
+      "sha256": "e359ce2365ad496d2d4f4e4663ebb52e63128cc8ad38a5a55c233744e222d626",
+      "note": "官方现成JPG，逐字节复制；图片编号是官方规范板编号，不代表所有产品必须固定相同张数。",
+      "source_document": "产品站制作-线上规范链接+PDF版/周边图素规范/轮播图规范+源文件/轮播图规范-PDF/轮播图第1-2张规范.jpg",
+      "source_sha256": "e359ce2365ad496d2d4f4e4663ebb52e63128cc8ad38a5a55c233744e222d626",
+      "derivative": false
+    },
+    {
+      "id": "C03",
+      "path": "source-images/carousel/C03_轮播图第3-4张规范.jpg",
+      "width": 3840,
+      "height": 2160,
+      "bytes": 2854301,
+      "sha256": "657f7e4ec0f0a065b3f62fb0354132497016e38b708fa6a2f4543b5c4a60b20b",
+      "note": "官方现成JPG，逐字节复制；图片编号是官方规范板编号，不代表所有产品必须固定相同张数。",
+      "source_document": "产品站制作-线上规范链接+PDF版/周边图素规范/轮播图规范+源文件/轮播图规范-PDF/轮播图第3-4张规范.jpg",
+      "source_sha256": "657f7e4ec0f0a065b3f62fb0354132497016e38b708fa6a2f4543b5c4a60b20b",
+      "derivative": false
+    },
+    {
+      "id": "C04",
+      "path": "source-images/carousel/C04_轮播图第5-6张规范.jpg",
+      "width": 3840,
+      "height": 2160,
+      "bytes": 2215767,
+      "sha256": "0a64951002068b68a4ebd21f0a664b8716aa89186232e83a975046b3db45c694",
+      "note": "官方现成JPG，逐字节复制；图片编号是官方规范板编号，不代表所有产品必须固定相同张数。",
+      "source_document": "产品站制作-线上规范链接+PDF版/周边图素规范/轮播图规范+源文件/轮播图规范-PDF/轮播图第5-6张规范.jpg",
+      "source_sha256": "0a64951002068b68a4ebd21f0a664b8716aa89186232e83a975046b3db45c694",
+      "derivative": false
+    },
+    {
+      "id": "C05",
+      "path": "source-images/carousel/C05_轮播图第7张规范.jpg",
+      "width": 3840,
+      "height": 2160,
+      "bytes": 1073972,
+      "sha256": "cafda9e56e1d98b795ef662ad40330688e2a6fb5b6facbe057dd3a0f06447b63",
+      "note": "官方现成JPG，逐字节复制；图片编号是官方规范板编号，不代表所有产品必须固定相同张数。",
+      "source_document": "产品站制作-线上规范链接+PDF版/周边图素规范/轮播图规范+源文件/轮播图规范-PDF/轮播图第7张规范.jpg",
+      "source_sha256": "cafda9e56e1d98b795ef662ad40330688e2a6fb5b6facbe057dd3a0f06447b63",
+      "derivative": false
+    }
+  ]
+}

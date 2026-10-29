@@ -3,3 +3,7 @@
 *.yaml text eol=lf
 *.json text eol=lf
 *.jpg binary
+*.png binary
+*.psd binary
+*.mjs text eol=lf
+.gitignore text eol=lf

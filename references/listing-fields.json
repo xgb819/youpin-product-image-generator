@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "profile_id": "user-2026-10-29",
+  "counting": "conservative_utf16_including_spaces_and_punctuation",
+  "fields": [
+    {"id":"product_name","label":"商品名称","max":30,"preferred_min":27},
+    {"id":"short_name","label":"商品简称","max":8,"preferred_min":6},
+    {"id":"description","label":"商品描述","max":30,"preferred_min":27},
+    {"id":"summary","label":"商品简述","max":13,"preferred_min":11},
+    {"id":"selling_point_1","label":"核心卖点1","max":24,"preferred_min":21},
+    {"id":"selling_point_2","label":"核心卖点2","max":24,"preferred_min":21},
+    {"id":"selling_point_3","label":"核心卖点3","max":24,"preferred_min":21}
+  ],
+  "source_notes": [
+    "七字段及最大字数由用户2026-10-29明确提供；preferred_min是尽量写满且允许差几个字的实现目标，不是平台最小字数",
+    "附件自述2022-08-26生效，前文商品名称30字与细则长标题20字有差异；本配置按用户本次30字上限执行，保留原文差异",
+    "原文商户指导提到8项，但用户仅要求这7项，不猜测或补造第8项",
+    "计数字符包含空格和标点，UTF-16码元采用保守上限；平台真实计数方式尚未用后台实测确认"
+  ]
+}
