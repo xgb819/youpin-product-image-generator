@@ -1,5 +1,7 @@
 # 识别证据与差异处理
 
+本页针对原47张详情规范。新增资源位/轮播及差异见 [resource-source-index.md](resource-source-index.md)、[scene-images.md](scene-images.md)、[carousel.md](carousel.md)，不改变原有详情条款的范围。
+
 这里记录会改变规范解释的来源差异，不把来源缺项补成官方规则。来源图片编号见 [source-index.md](source-index.md)，原图复制后的 SHA-256 见 [sources.json](sources.json)。
 
 ## 判断顺序

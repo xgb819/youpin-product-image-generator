@@ -1,5 +1,7 @@
 # 原图索引
 
+本页仅索引原47张详情来源。新增主图、实景和轮播见 [resource-source-index.md](resource-source-index.md)，S22是详情头图。
+
 本 skill 识别范围：所附 47 张小米有品产品站规范 JPG，整理日期 2026-10-05。原图逐字节复制，原文件名、尺寸及 SHA-256 保存在 [sources.json](sources.json)。本文件路径均相对于 references，可直接打开核对。
 
 “错误示范板”是整张来源的用途分类；板内可能同时存在正确对照图，应读 [anti-patterns.md](anti-patterns.md) 中对每一处错误的解释。普通规范板内若有禁用说明，也按具体文字处理。标注色块、箭头、编号不属于成品。

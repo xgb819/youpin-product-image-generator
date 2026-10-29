@@ -1,0 +1,17 @@
+{
+  "name": "youpin-product-image-generator",
+  "version": "0.3.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22.13" },
+  "packageManager": "pnpm@11.25.0",
+  "scripts": {
+    "test": "node --test",
+    "validate": "node scripts/validate-project.mjs",
+    "render": "node scripts/render-image.mjs",
+    "verify": "node scripts/verify-image.mjs",
+    "listing": "node scripts/export-listing-copy.mjs"
+  },
+  "dependencies": { "sharp": "0.35.5" },
+  "devDependencies": { "ag-psd": "31.0.3" }
+}

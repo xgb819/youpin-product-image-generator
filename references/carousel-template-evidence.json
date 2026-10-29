@@ -1,0 +1,116 @@
+{
+  "description": "官方PSD的只读文字层证据；示例文案不是本款商品事实。",
+  "templates": [
+    {
+      "path": "assets/templates/carousel/轮播图第一张.psd",
+      "sha256": "8cfcdf09e19849ff2cc46b34e3d8c6e10ddda0dd4e394ed95f79a1343b0132d4",
+      "summary": {
+        "width": 1080,
+        "height": 1080,
+        "texts": []
+      }
+    },
+    {
+      "path": "assets/templates/carousel/图文展示-1行主标题+1行描述信息.psd",
+      "sha256": "d597af2fe235535972380cd0cee22c41b9082aa80f145348116d716709536ee4",
+      "summary": {
+        "width": 1080,
+        "height": 1080,
+        "texts": [
+          {
+            "name": "卖点文字3",
+            "bounds": {
+              "left": 135,
+              "top": 193,
+              "right": 941,
+              "bottom": 268
+            },
+            "text_example": "大吸力强擦地，样样硬实力",
+            "font": "MiSans-Semibold",
+            "size": 68,
+            "leading": 82,
+            "alignment": "center"
+          },
+          {
+            "name": "4000Pa 澎湃风力",
+            "bounds": {
+              "left": 374,
+              "top": 288,
+              "right": 707,
+              "bottom": 328
+            },
+            "text_example": "4000Pa 澎湃风力",
+            "font": "MiSans-Medium",
+            "size": 42,
+            "leading": 42,
+            "alignment": "center"
+          }
+        ]
+      }
+    },
+    {
+      "path": "assets/templates/carousel/sku展示-2色.psd",
+      "sha256": "ddd893e463d69865722cd8e1f860d74d74209c029e84ba2f3db0960e101e0798",
+      "summary": {
+        "width": 1080,
+        "height": 1080,
+        "texts": [
+          {
+            "name": "深花灰",
+            "bounds": {
+              "left": 296,
+              "top": 933,
+              "right": 418,
+              "bottom": 972
+            },
+            "text_example": "深花灰",
+            "font": "MiSans-Medium",
+            "size": 42,
+            "alignment": "center"
+          },
+          {
+            "name": "碳石黑",
+            "bounds": {
+              "left": 665,
+              "top": 933,
+              "right": 787,
+              "bottom": 973
+            },
+            "text_example": "碳石黑",
+            "font": "MiSans-Medium",
+            "size": 42,
+            "alignment": "center"
+          },
+          {
+            "name": "卖点文字2",
+            "bounds": {
+              "left": 407,
+              "top": 190,
+              "right": 673,
+              "bottom": 254
+            },
+            "text_example": "两色可选",
+            "font": "MiSans-Semibold",
+            "size": 68,
+            "alignment": "center"
+          }
+        ]
+      }
+    }
+  ],
+  "adopted": {
+    "source": "C01/C03明确标注优先于PSD墨迹包围盒",
+    "title_top": 194,
+    "center_x": 540,
+    "title_size": 68,
+    "title_weight": "Semibold",
+    "description_size": 42,
+    "description_weight": "Medium",
+    "visible_gap": 30
+  },
+  "differences": [
+    "PSD标题包围盒y193，比194px覆盖区上界高1px；新渲染以194为最早可见上沿。",
+    "PSD两段墨迹包围盒间距20px；C03显式标注30px，本项目采用30并保留差异。",
+    "PSD示例描述色值和autoLeading不作为新的全局规则；按对应规范板解释。"
+  ]
+}
